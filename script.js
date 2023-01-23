@@ -35,19 +35,24 @@ WARNING!!! WARNING!!!
 // (Note, Step 2 will be done in the SpeakHello.js file.)
 
 
-(function(){
+(function(window){
     var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
+    for (let i=0; i < names.length; i++) {
+        console.log(names[i])
+        var name = names[i];
+        window.name = names[i];
 
-    for (/* fill in parts of the 'for' loop to loop over names array */) {
-
-})
-      if (/* fill in condition here */) {
-    // byeSpeaker.xxxx
-    } else {
-    // helloSpeaker.xxxx
     }
-}
-();
+
+    var firstLetter = name.charAt(0);
+
+      if (firstLetter === 'j'|| 'J') {
+        byeSpeaker (); 
+    } else {
+        helloSpeaker ();
+    }
+})
+(window);
 
 
 // STEP 10:
